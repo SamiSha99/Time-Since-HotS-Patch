@@ -94,18 +94,29 @@ button:hover {
 }
 
 table {
-    width:66%;
+    width:75%;
     margin: 25px 0;
 }
 
 th {
-    font-size: 48px;
+    font-size: 40px;
+    padding: 5px 10px;
 }
 
 td {
     text-align: center;
     vertical-align: middle;
-    font-size: 32px;
+    font-size: 28px;
+    width:32%
+}
+
+td:nth-child(1)
+{
+    width:4%;
+}
+
+.tag-cell {
+    font-size: 16px;
 }
 
 tr {
@@ -123,6 +134,62 @@ th {
 
 tr:nth-child(even) {
     background: #9269c3;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #8640db;
+    color: ghostwhite;
+    text-align: center;
+    border-radius: 6px;
+    border: 3px solid ghostwhite;
+    padding: 5px;
+    position: absolute;
+    z-index: 5;
+    bottom: 100%;
+    left: 100%;
+    margin-right: 50px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.info:before
+{
+    content: '?';
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    font-size: 28px;
+    line-height: 32px;
+    border-radius: 26px;
+    margin-right: 4px;
+    padding: 1px;
+    color: #8640db;
+    background: ghostwhite;
+    border: 1px solid #8640db;
+    text-decoration: none;
+}
+
+.info:hover:before
+{
+    color: ghostwhite;
+    background: #8640db;
+    border-color: ghostwhite;
+    text-decoration: none;
 }
 
 @keyframes rotate {
