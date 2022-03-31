@@ -3,6 +3,7 @@
 // with some specifications added (like almost exact date of release).
 // First entry is the newest while last is the oldest.
 const patchDateMaps = [
+        {version: "2.55.2", date: "Tue Mar 29 2022 20:30:09 GMT", tag:["balance"]},
         {version: "2.55.1", date: "Tue Feb 01 2022 18:10:56 GMT", tag:["balance"]},
         {version: "2.55.0", date: "Thu Dec 07 2021 19:08:49 GMT", tag:["event", "balance", "rework"]},
         {version: "2.54.4", date: "Mon Sep 27 2021 18:11:00 GMT", tag:["balance"]},
