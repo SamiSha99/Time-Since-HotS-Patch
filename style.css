@@ -158,7 +158,11 @@ tr:nth-child(even) {
     opacity: 0;
     transition: opacity 0.5s;
 }
-  
+
+.maintenance-class .tooltip .tooltiptext {
+    background-color: #DC143C;
+}
+
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -190,6 +194,24 @@ tr:nth-child(even) {
     background: #8640db;
     border-color: ghostwhite;
     text-decoration: none;
+}
+
+.maintenance-class .info:before
+{
+    color: #DC143C;
+    background: ghostwhite;
+    border: 1px solid #DC143C;
+}
+
+.maintenance-class .info:hover:before
+{
+    color: ghostwhite;
+    background: #DC143C;
+    border-color: ghostwhite;
+}
+
+.maintenance-class {
+    background-color: #DC143C;
 }
 
 @keyframes rotate {

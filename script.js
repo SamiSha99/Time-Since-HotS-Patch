@@ -3,6 +3,7 @@
 // with some specifications added (like almost exact date of release).
 // First entry is the newest while last is the oldest.
 const patchDateMaps = [
+        {version: "2.55.3", date: "Tue Jul 12 2022 18:27:19 GMT", tag:["maintenance"]},
         {version: "2.55.2", date: "Wed May 11 2022 18:26:07 GMT", tag:["hotfix"]},
         {version: "2.55.2", date: "Mon Apr 28 2022 02:11:23 GMT", tag:["hotfix"]},
         {version: "2.55.2", date: "Tue Mar 29 2022 20:30:09 GMT", tag:["balance"]},
@@ -221,12 +222,16 @@ function showPatchDatesList() {
     table.appendChild(thead);
 
     let cell;
-
+    let customColorString = "";
     for(i = 0; i < patchDateMaps.length; i++)
     {
         tr = table.insertRow();
         tr.classList.add("fade-in-anim-cell");
+        customColorString = customClassColoring(patchDateMaps[i].tag);
+        if(customColorString != "")
+            tr.classList.add(customColorString);
         tr.style.animationDelay = String(0.01 + i * 0.01) + "s";
+        //tr.style.backgroundColor = customBackgroundColor(patchDateMaps[i].tag);
         
         for(u = 0; u < rowAmount; u++)
         {
@@ -308,6 +313,21 @@ function getCellClass(i, u)
         return "tag-cell";    
     }
 
+    return "";
+}
+
+function customClassColoring(tags)
+{
+    for(t = 0; t < tags.length; t++)
+    {
+        switch(tags[i])
+        {
+            case "maintenance":
+                return "maintenance-class";//"#DC143C";
+            default:
+                return "";
+        }
+    }
     return "";
 }
 
